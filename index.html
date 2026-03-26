@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>To Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 특별한 공간</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f0f4f8; }
-        .box { background: white; padding: 30px; border-radius: 15px; shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; }
-        h1 { color: #2d3748; }
-        p { color: #4a5568; }
+        :root { --main-bg: #0f172a; --accent: #38bdf8; }
+        body { margin: 0; font-family: 'Pretendard', sans-serif; background-color: var(--main-bg); color: white; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        .container { text-align: center; z-index: 10; padding: 20px; }
+        h1 { font-size: 3rem; margin-bottom: 10px; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
+        .btn { padding: 12px 24px; background: var(--accent); color: var(--main-bg); text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; cursor: pointer; border: none; }
+        .btn:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(56, 189, 248, 0.5); }
+        /* 배경 애니메이션 */
+        .circle { position: absolute; width: 300px; height: 300px; background: rgba(56, 189, 248, 0.1); filter: blur(80px); border-radius: 50%; z-index: 1; animation: float 10s infinite alternate; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>👋 안녕, 인터넷 세상!</h1>
-        <p>Fucking Good</p>
-        <p><b>코딩 몰라도 여기까지 왔어요!</b></p>
+    <div class="circle" style="top: 10%; left: 10%;"></div>
+    <div class="circle" style="bottom: 10%; right: 10%; animation-delay: -5s;"></div>
+    
+    <div class="container">
+        <h1>Special Croquembouche</h1>
+        <p>바이브코딩으로 만든 저의 첫 번째 클라우드 웹사이트입니다.</p>
+        <button class="btn" onclick="alert('반가워요! 코딩의 세계에 오신 걸 환영합니다!')">클릭해 보세요!</button>
     </div>
 </body>
 </html>
